@@ -4,16 +4,12 @@ import com.money.projetoMoney.model.Orcamento;
 
 import java.math.BigDecimal;
 
-public class DescontoPorValor extends Desconto{
-    //Contrutor da class Desconto
-    public DescontoPorValor(Desconto proximo) {
-        super(proximo);
+public class SemDesconto extends Desconto{
+
+    public SemDesconto() {
+        super(null);
     }
-    public BigDecimal calcular(Orcamento orcamento){//aplica desconto
-       if (orcamento.getValorOrcamento().compareTo(new BigDecimal("500")) > 0) {
-            return orcamento.getValorOrcamento().multiply( new BigDecimal("0.1"));
-        } else {//senao aplica o próximo
-            return proximo.calcular(orcamento);
-        }
+    public BigDecimal calcular(Orcamento orcamento){
+            return BigDecimal.ZERO;
     }
 }
