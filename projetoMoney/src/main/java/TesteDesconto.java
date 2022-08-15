@@ -8,10 +8,11 @@ import java.math.BigDecimal;
 
 public class TesteDesconto {
     public static void main(String[] args) {
-        Orcamento orcamento = new Orcamento(new BigDecimal("600"), 3, new BigDecimal("0"));
+        Orcamento orcamento = new Orcamento(new BigDecimal("200"), 9, new BigDecimal("0"));
         CalculadoraDeDescontos calculadora = new CalculadoraDeDescontos();
         System.out.println("Valor orçamento = " + orcamento.getValorOrcamento());
+        System.out.println("Valor desconto antes = " + orcamento.getDescontoOrcamento());
         System.out.println("Valor metodo desconto = " + calculadora.calcular(orcamento));
-        System.out.println("Valor desconto = " + orcamento.getDescontoOrcamento());
+        System.out.println("Valor desconto depois = " + orcamento.getDescontoOrcamento());
     }
 }

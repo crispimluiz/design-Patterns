@@ -1,7 +1,4 @@
 package com.money.projetoMoney.model;
-
-import com.money.projetoMoney.model.descontos.CalculadoraDeDescontos;
-
 import java.math.BigDecimal;
 
 public class Orcamento {
@@ -33,9 +30,13 @@ public class Orcamento {
     }
 
     public BigDecimal getDescontoOrcamento() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return descontoOrcamento;
     }
-
     public void setDescontoOrcamento(BigDecimal descontoOrcamento) {
         this.descontoOrcamento = descontoOrcamento;
     }
